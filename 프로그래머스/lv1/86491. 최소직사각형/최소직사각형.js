@@ -1,18 +1,27 @@
 function solution(sizes) {
-    let longer = [];
-    let shorter = [];
     
     for(i = 0; i < sizes.length; i++) {
-        if(sizes[i][0] > sizes[i][1]){
-            longer.push(sizes[i][0]);
-            shorter.push(sizes[i][1]);
+        if(sizes[i][0] > sizes[i][1]) {
+            sizeComparison(sizes[i], 0);
         }else{
-             longer.push(sizes[i][1]);
-             shorter.push(sizes[i][0]);
+            sizeComparison(sizes[i], 1);
         }
     }
     
-    biggerSideMax = Math.max(...longer);
-    smallerSideMax = Math.max(...shorter);
-    return biggerSideMax * smallerSideMax;
+    // return biggerSideMax * smallerSideMax;
+}
+
+
+function sizeComparison(size, num){
+    let biggerSideMax = 0;
+    let smallerSideMax = 0;
+    
+    // console.log(num)
+
+    if(size[num] > biggerSideMax) {
+        biggerSideMax = size[num];
+    }
+    if(size[num] > smallerSideMax) {
+        smallerSideMax = size[num];
+    }
 }
