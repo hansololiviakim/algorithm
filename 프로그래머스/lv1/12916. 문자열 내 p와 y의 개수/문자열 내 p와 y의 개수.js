@@ -5,5 +5,5 @@ function solution(s){
         if(s.toLowerCase().charAt(i) === 'p') p++;
         if(s.toLowerCase().charAt(i) === 'y') y++;
     }
-    return p === y ? true : false
+    return p === y ? true : false;
 }
