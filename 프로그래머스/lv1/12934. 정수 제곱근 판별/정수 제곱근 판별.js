@@ -4,9 +4,7 @@ function solution(n) {
         if(n / i === i) {
             answer = (i + 1) ** 2;
             break;
-        } else {
-            answer = -1;
         }
     }
-    return answer;
+    return answer === 0 ? -1 : answer;
 }
