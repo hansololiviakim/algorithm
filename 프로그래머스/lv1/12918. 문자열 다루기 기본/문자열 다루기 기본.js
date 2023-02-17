@@ -1,6 +1,5 @@
-function solution(s) {
-    let regex = /[a-z|A-Z]/;    
+function solution(s) {  
     let lengthChk = (s.length === 4) || (s.length === 6)
-    let engChk = regex.test(s);
+    let engChk = /[a-z|A-Z]/.test(s);
     return lengthChk && !engChk ? true : false;
 }
