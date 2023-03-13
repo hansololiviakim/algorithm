@@ -8,11 +8,5 @@ function solution(letter) {
     };
 
     const arr = letter.split(' ');
-    let str = '';
-    for(let i = 0; i < arr.length; i++) {
-        if(Object.hasOwn(morse, arr[i])) {
-            str += morse[arr[i]];
-        }
-    }
-    return str;
+    return arr.map(e => morse[e]).join('');
 }
