@@ -1,4 +1,4 @@
 function solution(s) {
-    let answer = s.length % 2 === 1 ? s.at(s.length / 2) : s.at((s.length / 2)-1) + s.at(s.length / 2);
-    return answer;
+    const center = Math.floor(s.length / 2);
+    return s.length % 2 ? s.substr(center, 1) : s.substr(center - 1, 2)
 }
