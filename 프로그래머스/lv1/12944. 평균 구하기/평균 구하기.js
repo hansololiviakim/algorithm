@@ -1,5 +1,4 @@
 function solution(arr) {
-    let answer = 0;
-    arr.forEach((element) => answer += element);
-    return answer / arr.length;
+    const sum = arr.reduce((acc, cur) => acc += cur);
+    return sum / arr.length;
 }
