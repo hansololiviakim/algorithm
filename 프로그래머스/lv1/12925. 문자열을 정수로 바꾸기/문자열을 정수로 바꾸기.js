@@ -1,3 +1,3 @@
 function solution(s) {
-    return Math.trunc(s);
+    return Number(s);
 }
