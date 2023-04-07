@@ -1,6 +1,5 @@
 function solution(x) {
-    let str = String(x).split('');
-    let sum = 0;
-    for(let i = 0; i < str.length; i++) sum += Number(str[i]);
-    return x % sum === 0;    
+    // const sum = Array.from(String(x)).reduce((acc, cur) => acc += Number(cur));
+    const sum = String(x).split('').reduce((acc, cur) => acc += Number(cur), 0);
+    return x % sum === 0
 }
