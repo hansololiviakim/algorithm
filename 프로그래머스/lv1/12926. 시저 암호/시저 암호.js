@@ -7,7 +7,6 @@ function solution(s, n) {
         const index = alphabet.indexOf(e);
         return index === -1 ? e
             : s[idx] === s[idx].toUpperCase() ? alphabet[index+n] : alphabet[index+n].toLowerCase();
-
     }).join('');
     
     return caesar;
