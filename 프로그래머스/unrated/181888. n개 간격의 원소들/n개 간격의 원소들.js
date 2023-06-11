@@ -1,0 +1,1 @@
+const solution = (num_list, n) => num_list.filter((e, idx) => idx === 0 || idx % n === 0);
