@@ -1,1 +1,1 @@
-const solution = (a, b) => String(a) + b > String(b) + a ? Number(String(a) + b) : Number(String(b) + a);
+const solution = (a, b) => Math.max(Number(`${a}${b}`), Number(`${b}${a}`));
