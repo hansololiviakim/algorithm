@@ -1,5 +1,1 @@
-const solution = (a, d, included) => {
-    let answer = 0;
-    included.map((e, idx) => e ? answer += a + (idx * d) : 0 );
-    return answer;
-}
+const solution = (a, d, included) => included.reduce((acc, cur, idx) => cur ? acc += a + (idx * d) : acc, 0);
