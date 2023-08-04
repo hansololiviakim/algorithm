@@ -1,9 +1,6 @@
 const solution = (food) => {
     let answer = '';
-    food.map((e, idx) => {
-        const num = Math.floor(e / 2);
-        num !== 0 ? answer += String(idx).repeat(num) : '';
-    });
-    answer += `0${answer.split('').reverse().join('')}`;
+    food.map((e, idx) => answer += String(idx).repeat(Math.floor(e / 2)));
+    answer += '0' + [...answer].reverse().join('');
     return answer;
 }
