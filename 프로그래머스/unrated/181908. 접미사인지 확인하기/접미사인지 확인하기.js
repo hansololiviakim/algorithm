@@ -1,0 +1,1 @@
+const solution = (str, suffix) => str.indexOf(suffix, str.length - suffix.length) === -1 ? 0 : 1;
