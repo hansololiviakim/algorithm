@@ -1,0 +1,1 @@
+const solution = (list, n) => [...list.slice(n), ...list.slice(0, n)];
