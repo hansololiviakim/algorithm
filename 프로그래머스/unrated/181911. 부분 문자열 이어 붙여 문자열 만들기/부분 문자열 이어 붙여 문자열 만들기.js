@@ -1,0 +1,1 @@
+const solution = (str, parts) => str.map((e, i) => e.slice(parts[i][0], parts[i][1] + 1)).join('');
