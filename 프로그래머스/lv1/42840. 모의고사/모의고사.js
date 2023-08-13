@@ -8,7 +8,7 @@ function solution(answers) {
     const two_answer = answers.filter((e, idx) => e === two[idx % two.length]).length;
     const three_answer = answers.filter((e, idx) => e === three[idx % three.length]).length;
     const max = Math.max(one_answer, two_answer, three_answer);
-    
+        
     if(one_answer === max) answer.push(1);
     if(two_answer === max) answer.push(2);
     if(three_answer === max) answer.push(3);
