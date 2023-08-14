@@ -1,7 +1,4 @@
-function solution(s) {
+const solution = (s) => {
     const arr = s.split(' ');
-    const sum = arr.reduce((acc, cur, idx) => {
-        return cur === 'Z' ? acc - Number(arr[idx - 1]) : acc + Number(cur);
-    }, 0)
-    return sum;
+    return arr.reduce((acc, cur, idx) => cur !== 'Z' ? acc + +cur : acc - +arr[idx - 1], 0);
 }
