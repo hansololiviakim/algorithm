@@ -1,0 +1,1 @@
+const solution = (arr, idx) => arr.findIndex((e, index) => index >= idx && e === 1);
