@@ -1,0 +1,1 @@
+const solution = (str, s, e) => str.slice(0, s) + [...str.slice(s, e + 1)].reverse().join('') + str.slice(e + 1);
