@@ -1,4 +1,1 @@
-const solution = (myStr) => {
-    const arr = myStr.replace(/[a, b, c]/g, ' ').split(' ').filter(e => e !== '')
-    return arr.length === 0 ? ['EMPTY'] : arr;
-}
+const solution = (myStr) => myStr.match(/[^a-c]+/g) || ['EMPTY'];
