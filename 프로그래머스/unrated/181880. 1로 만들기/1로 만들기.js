@@ -1,11 +1,9 @@
 const solution = (num_list) => {
     let count = 0;
     for (let i of num_list) {
-        if (i === 1) continue;
-        for (let j = i, k = i; k >= 1; j--) {
-            if (k === 1) break;
+        while (i !== 1) {
+            i = i % 2 ? (i-1) / 2 : i / 2;
             count++;
-            k = k % 2 ? (k-1) / 2 : k / 2;
         }
     }
     return count;
