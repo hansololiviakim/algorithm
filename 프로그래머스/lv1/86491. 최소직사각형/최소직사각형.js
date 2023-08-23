@@ -1,10 +1,8 @@
 const solution = (sizes) => {
-    let maxes = [];
-    let mins = [];
-    sizes.map(e => [Math.max(...e), Math.min(...e)])
-         .map(v => {
-            maxes.push(v[0]);
-            mins.push(v[1]);
-         })
-    return Math.max(...maxes) * Math.max(...mins);
+    let answer = [0, 0];
+    sizes.map(([w, h]) => {
+        if (Math.max(w, h) > answer[0]) answer[0] = Math.max(w, h);
+        if (Math.min(w, h) > answer[1]) answer[1] = Math.min(w, h);
+    })
+    return answer[0] * answer[1];
 }
