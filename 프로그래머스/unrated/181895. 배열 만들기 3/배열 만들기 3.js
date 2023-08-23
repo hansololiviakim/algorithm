@@ -1,7 +1,4 @@
 const solution = (arr, intervals) => {
-    let answer = [];
-    for (let [start, end] of intervals) {
-        answer = [...answer, ...arr.slice(start, end+1)];
-    }
-    return answer;
+    const [[a1, b1], [a2, b2]] = intervals;
+    return [...arr.slice(a1, b1+1), ...arr.slice(a2, b2+1)];
 }
